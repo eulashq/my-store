@@ -3,202 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EULA HQ | Official Store</title>
+    <title>EULA HQ | Official Catalog & Store</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #0b0f19;
+            background-color: #310a11; /* Deep Burgundy Background from your flyer */
+            background-image: radial-gradient(circle at 20% 20%, #4a121d 0%, transparent 40%),
+                              radial-gradient(circle at 80% 80%, #20050a 0%, transparent 50%);
         }
-        .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        
+        .brand-heading {
+            font-family: 'Comfortaa', cursive;
+            color: #fbf6f0;
         }
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+
+        /* Cream Notebook Style Card */
+        .notebook-card {
+            background-color: #fbf6f0;
+            color: #2b1216;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(218, 203, 186, 0.2);
+            border: 1px solid #eadacc;
+        }
+
+        /* Dark Wine Accent Boxes */
+        .wine-card {
+            background-color: #4a121d;
+            border: 1px solid rgba(251, 246, 240, 0.1);
+        }
+
+        .gradient-accent-text {
+            background: linear-gradient(135deg, #fbf6f0 0%, #ffccd5 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gradient-btn {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-        }
-        .gradient-btn:hover {
-            background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
-        }
     </style>
 </head>
-<body class="text-gray-200 min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+<body class="text-[#fbf6f0] min-h-screen flex flex-col justify-between selection:bg-[#4a121d] selection:text-[#fbf6f0]">
 
-    <!-- Top Navigation Header -->
-    <header class="w-full max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-gray-800">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                <i class="fa-solid fa-crown text-white text-lg"></i>
-            </div>
-            <span class="text-2xl font-extrabold tracking-tight text-white">EULA<span class="gradient-text">HQ</span></span>
+    <!-- Header Section -->
+    <header class="w-full max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-[#4a121d]">
+        <div class="text-center sm:text-left">
+            <h1 class="text-3xl font-bold tracking-wider brand-heading flex items-center justify-center sm:justify-start gap-2">
+                ✨ eulahq <span class="text-xs bg-[#4a121d] text-[#ffccd5] px-2 py-0.5 rounded-full border border-pink-900/30">OFFICIAL</span>
+            </h1>
         </div>
-        <div class="flex items-center gap-4">
-            <a href="https://www.threads.net/@eulashq" target="_blank" class="text-gray-400 hover:text-white transition duration-200 flex items-center gap-2 text-sm bg-gray-900 px-3 py-1.5 rounded-lg border border-gray-800">
-                <i class="fa-brands fa-threads"></i> @eulashq
+        
+        <!-- Social & Updates Bar -->
+        <div class="flex flex-wrap items-center justify-center gap-3">
+            <a href="https://www.threads.net/@eulashq" target="_blank" class="bg-[#4a121d] hover:bg-[#5c1825] text-[#ffccd5] transition text-xs px-3 py-2 rounded-xl border border-pink-900/20 flex items-center gap-1.5 font-medium">
+                <i class="fa-brands fa-threads"></i> Main Threads
             </a>
-            <a href="https://t.me/eulashqbot" target="_blank" class="gradient-btn text-white text-sm font-semibold px-4 py-2 rounded-xl transition shadow-md shadow-indigo-500/10 flex items-center gap-2">
-                <i class="fa-solid fa-book-open"></i> View Catalog
+            <a href="https://www.threads.net/@hqeula" target="_blank" class="bg-[#4a121d] hover:bg-[#5c1825] text-[#ffccd5] transition text-xs px-3 py-2 rounded-xl border border-pink-900/20 flex items-center gap-1.5 font-medium">
+                <i class="fa-brands fa-threads opacity-70"></i> Alt Threads
+            </a>
+            <a href="https://t.me/eulashqbot" target="_blank" class="bg-[#fbf6f0] hover:bg-[#eee6dc] text-[#310a11] transition text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 shadow-md">
+                <i class="fa-solid fa-book-open"></i> Catalog Bot
             </a>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="flex-grow w-full max-w-4xl mx-auto px-4 py-12">
-        
-        <!-- Hero Section -->
-        <div class="text-center mb-10">
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-                Welcome to <span class="gradient-text">EULA HQ</span>
-            </h1>
-            <p class="text-gray-400 text-lg max-w-xl mx-auto">
-                Your premier source for premium digital assets. Quick processing, verified configurations, and dedicated operations.
-            </p>
-        </div>
+    <!-- Main Workspace -->
+    <main class="flex-grow w-full max-w-4xl mx-auto px-4 py-10">
 
-        <!-- Quick Access Hub / Guidelines Box -->
-        <div class="glass-card rounded-2xl p-6 sm:p-8 mb-12 shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-16 -top-16 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
-            <div class="absolute -left-16 -bottom-16 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
-
-            <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-circle-info text-indigo-400"></i> How to Order & Get Updates
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Step 1: Catalog -->
-                <div class="bg-gray-950/50 p-5 rounded-xl border border-gray-800/80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-3 font-bold text-sm">01</div>
-                        <h3 class="font-semibold text-white mb-1">Check Catalog</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Get the latest prices, asset formats, and layout specifications directly.</p>
-                    </div>
-                    <a href="https://t.me/eulashqbot" target="_blank" class="w-full block text-center text-xs bg-indigo-500/10 text-indigo-300 hover:bg-indigo-500/20 font-medium py-2 rounded-lg transition">
-                        <i class="fa-brands fa-telegram mr-1"></i> Open Catalog Bot
-                    </a>
+        <!-- Top Notice Alert Box -->
+        <div class="wine-card rounded-2xl p-4 mb-8 text-center sm:text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl">
+            <div class="flex items-center gap-3 justify-center sm:justify-start">
+                <div class="w-10 h-10 rounded-xl bg-[#5c1825] flex items-center justify-center text-[#ffccd5]">
+                    <i class="fa-solid fa-bell-ring fa-bounce"></i>
                 </div>
-
-                <!-- Step 2: Updates -->
-                <div class="bg-gray-950/50 p-5 rounded-xl border border-gray-800/80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-9 h-9 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400 mb-3 font-bold text-sm">02</div>
-                        <h3 class="font-semibold text-white mb-1">Backup Updates</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">If the bot updates late, find instant fallback pricing notes on our Threads channels.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <a href="https://www.threads.net/@eulashq" target="_blank" class="w-full flex items-center justify-center text-xs bg-gray-900 text-gray-300 hover:bg-gray-800 font-medium py-1.5 rounded-lg border border-gray-800 transition">
-                            <i class="fa-brands fa-threads mr-1.5 text-pink-400"></i> Main Account
-                        </a>
-                        <a href="https://www.threads.net/@hqeula" target="_blank" class="w-full flex items-center justify-center text-xs bg-gray-900 text-gray-300 hover:bg-gray-800 font-medium py-1.5 rounded-lg border border-gray-800 transition">
-                            <i class="fa-brands fa-threads mr-1.5 text-purple-400"></i> Alt Account
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Step 3: Order -->
-                <div class="bg-gray-950/50 p-5 rounded-xl border border-gray-800/80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-3 font-bold text-sm">03</div>
-                        <h3 class="font-semibold text-white mb-1">Place Order</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Ready to purchase? Load your requirements into our dedicated ordering interface.</p>
-                    </div>
-                    <a href="http://t.me/eulashqorderbot" target="_blank" class="w-full block text-center text-xs gradient-btn text-white font-semibold py-2 rounded-lg transition shadow-lg shadow-purple-500/10">
-                        <i class="fa-solid fa-cart-shopping mr-1"></i> Open Order Bot
-                    </a>
+                <div>
+                    <h4 class="font-bold text-sm text-white">Bot Updates Delayed?</h4>
+                    <p class="text-xs text-[#ffccd5]/80">Follow our Threads accounts above to receive immediate price drops and new layouts!</p>
                 </div>
             </div>
+            <a href="https://t.me/eulashqbot" target="_blank" class="bg-[#5c1825] hover:bg-[#701e2e] text-white text-xs font-semibold px-4 py-2.5 rounded-lg border border-pink-900/30 shrink-0 transition">
+                Check Format & Price
+            </a>
         </div>
 
-        <!-- Featured Categories Layout -->
-        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-            <i class="fa-solid fa-bolt text-amber-400"></i> Featured Categories
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-            <div class="glass-card rounded-xl p-5 hover:border-gray-700 transition duration-300">
-                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">Premium</span>
-                <h3 class="text-lg font-bold text-white mt-3 mb-1">Tier-1 Configurations</h3>
-                <p class="text-sm text-gray-400 mb-4">Optimized high-speed variants ready for deployment.</p>
-                <div class="flex justify-between items-center pt-3 border-t border-gray-800">
-                    <span class="text-xs text-gray-500">Check bot for latest price</span>
-                    <a href="https://t.me/eulashqbot" target="_blank" class="text-xs font-semibold text-white hover:underline">View Formats <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
-                </div>
-            </div>
-
-            <div class="glass-card rounded-xl p-5 hover:border-gray-700 transition duration-300">
-                <span class="text-xs font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-2 py-1 rounded">Standard</span>
-                <h3 class="text-lg font-bold text-white mt-3 mb-1">Core Deployments</h3>
-                <p class="text-sm text-gray-400 mb-4">Stable formatting blueprints tailored for standard operations.</p>
-                <div class="flex justify-between items-center pt-3 border-t border-gray-800">
-                    <span class="text-xs text-gray-500">Check bot for latest price</span>
-                    <a href="https://t.me/eulashqbot" target="_blank" class="text-xs font-semibold text-white hover:underline">View Formats <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Last Section: Streaming Section (Netflix) -->
-        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-            <i class="fa-solid fa-film text-pink-500"></i> Streaming Section
-        </h2>
-        <div class="glass-card rounded-xl p-6 border-pink-500/20 hover:border-pink-500/40 transition duration-300 relative overflow-hidden">
-            <div class="absolute right-0 top-0 w-32 h-32 bg-red-600/5 rounded-full blur-2xl pointer-events-none"></div>
+        <!-- Master Content Layout Matrix -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-10">
             
-            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div class="flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-xl bg-red-600/10 border border-red-600/20 flex items-center justify-center text-red-500 shadow-inner">
-                        <i class="fa-brands fa-netflix text-3xl"></i>
+            <!-- LEFT & CENTER COLUMN: The App Notebook -->
+            <div class="lg:col-span-2 notebook-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+                <!-- Decorative Notebook Ring Mimic Line -->
+                <div class="absolute top-0 bottom-0 left-3 w-[2px] border-l border-dashed border-[#eadacc]"></div>
+                
+                <div class="pl-4">
+                    <div class="text-center mb-6">
+                        <span class="text-xs font-bold tracking-widest text-[#4a121d]/60 uppercase block mb-1">✦ Services Showcase ✦</span>
+                        <h2 class="text-2xl font-extrabold text-[#310a11] border-b-2 border-[#310a11]/10 pb-2">◆ EDITING PREMIUM APPS ◆</h2>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
-                            Netflix Premium <span class="text-xs font-semibold bg-red-600/20 text-red-400 px-2 py-0.5 rounded border border-red-600/30">Ultra HD 4K</span>
-                        </h3>
-                        <p class="text-sm text-gray-400 mt-1">Shared & Private profiles, anti-screen limits, and full premium packages available.</p>
+
+                    <!-- App Items Collection Grid -->
+                    <div class="space-y-5">
+                        <!-- App 1 -->
+                        <div class="border-b border-dashed border-[#d2c3b2] pb-3">
+                            <h3 class="font-bold text-[#310a11] flex items-center gap-1.5"><span class="text-xs">◆</span> ALIGHT MOTION PRO</h3>
+                            <div class="flex justify-between items-center text-sm text-[#4a121d]/90 mt-1 pl-4">
+                                <span>Private (1 Month) / (1 Year)</span>
+                                <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM4.00 - RM5.00</span>
+                            </div>
+                        </div>
+                        <!-- App 2 -->
+                        <div class="border-b border-dashed border-[#d2c3b2] pb-3">
+                            <h3 class="font-bold text-[#310a11] flex items-center gap-1.5"><span class="text-xs">◆</span> PICSART GOLD</h3>
+                            <div class="flex justify-between items-center text-sm text-[#4a121d]/90 mt-1 pl-4">
+                                <span>Private / Sharing (1 Month)</span>
+                                <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM4.70 - RM5.00</span>
+                            </div>
+                        </div>
+                        <!-- App 3 -->
+                        <div class="border-b border-dashed border-[#d2c3b2] pb-3">
+                            <h3 class="font-bold text-[#310a11] flex items-center gap-1.5"><span class="text-xs">◆</span> CAPCUT PRO</h3>
+                            <div class="flex justify-between items-center text-sm text-[#4a121d]/90 mt-1 pl-4">
+                                <span>Private (1 Week) / (1 Month)</span>
+                                <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM5.50 - RM11.50</span>
+                            </div>
+                        </div>
+                        <!-- App 4 -->
+                        <div class="border-b border-dashed border-[#d2c3b2] pb-3">
+                            <h3 class="font-bold text-[#310a11] flex items-center gap-1.5"><span class="text-xs">◆</span> CANVA PRO</h3>
+                            <div class="flex justify-between items-center text-sm text-[#4a121d]/90 mt-1 pl-4">
+                                <span>Invited / Owner Setup</span>
+                                <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM2.50 - RM5.00</span>
+                            </div>
+                        </div>
+                        <!-- App 5 -->
+                        <div class="border-b border-dashed border-[#d2c3b2] pb-3">
+                            <h3 class="font-bold text-[#310a11] flex items-center gap-1.5"><span class="text-xs">◆</span> REMINI PREMIUM</h3>
+                            <div class="flex justify-between items-center text-sm text-[#4a121d]/90 mt-1 pl-4">
+                                <span>Private (14 Days) / (1 Month)</span>
+                                <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM5.50 - RM7.00</span>
+                            </div>
+                        </div>
+                        <!-- App 6 -->
+                        <div class="border-b border-dashed border-[#d2c3b2] pb-3">
+                            <h3 class="font-bold text-[#310a11] flex items-center gap-1.5"><span class="text-xs">◆</span> MEITU PREMIUM</h3>
+                            <div class="flex justify-between items-center text-sm text-[#4a121d]/90 mt-1 pl-4">
+                                <span>Private (7 Days) / (1 Month)</span>
+                                <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM4.50 - RM6.90</span>
+                            </div>
+                        </div>
+                        <!-- App 7 -->
+                        <div class="pb-1">
+                            <h3 class="font-bold text-[#310a11] flex items-center gap-1.5"><span class="text-xs">◆</span> WINK PREMIUM</h3>
+                            <div class="flex justify-between items-center text-sm text-[#4a121d]/90 mt-1 pl-4">
+                                <span>Private / Sharing (1 Month)</span>
+                                <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM5.50 - RM7.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Badges inside notebook -->
+                    <div class="mt-8 pt-4 border-t-2 border-[#310a11]/10 flex flex-wrap gap-2 justify-center text-xs font-bold text-[#4a121d]">
+                        <span class="bg-[#eadacc]/40 px-2.5 py-1 rounded-md">✦ Premium Features</span>
+                        <span class="bg-[#eadacc]/40 px-2.5 py-1 rounded-md">✦ Support All Devices</span>
+                        <span class="bg-[#eadacc]/40 px-2.5 py-1 rounded-md">✦ Stable Account</span>
                     </div>
                 </div>
-                <a href="http://t.me/eulashqorderbot" target="_blank" class="w-full sm:w-auto text-center gradient-btn text-white text-sm font-bold px-5 py-3 rounded-xl transition shadow-lg shadow-purple-500/20 flex items-center justify-center gap-2 shrink-0">
-                    <i class="fa-solid fa-cart-shopping"></i> Order Premium
-                </a>
             </div>
 
-            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 pt-4 border-t border-gray-800/60 text-xs text-gray-500">
-                <span class="flex items-center gap-1"><i class="fa-solid fa-circle-check text-green-500 text-[10px]"></i> Instant Delivery Configs</span>
-                <span class="flex items-center gap-1"><i class="fa-solid fa-circle-check text-green-500 text-[10px]"></i> Full Warranty Covered</span>
-                <span class="flex items-center gap-1"><i class="fa-solid fa-circle-info text-indigo-400 text-[10px]"></i> Check catalog bot for current rate sheets</span>
+            <!-- RIGHT COLUMN: Terms & Operational Info Block -->
+            <div class="space-y-6">
+                <!-- Terms & Conditions Card (Matches dark side block in flyer) -->
+                <div class="wine-card rounded-2xl p-6 shadow-2xl relative">
+                    <div class="absolute top-3 right-4 text-[#ffccd5]/20 text-xl"><i class="fa-solid fa-star"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-4 border-b border-pink-900/40 pb-2 tracking-wide">
+                        Terms & Conditions
+                    </h3>
+                    <span class="text-xs font-bold text-[#ffccd5] tracking-wider block mb-2 uppercase">Notes:</span>
+                    <ul class="space-y-3 text-xs text-[#ffccd5]/90">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Strictly No Refund After Payment</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Process Time: 1-5 Hours</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Please No Rush Order</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span class="font-bold text-white">100% Trusted Store (No Scam)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Custom Mock UI Widget matching bottom flyer element -->
+                <div class="bg-[#fbf6f0] border-2 border-[#4a121d] rounded-xl p-4 shadow-xl text-center text-[#310a11]">
+                    <div class="bg-[#4a121d]/10 rounded-lg p-2 mb-3 text-xs font-mono font-bold tracking-tight text-[#4a121d]">
+                         🔍 @eulashq
+                    </div>
+                    <a href="http://t.me/eulashqorderbot" target="_blank" class="block w-full bg-[#4a121d] hover:bg-[#5c1825] text-[#fbf6f0] font-extrabold text-xs py-2.5 rounded-lg tracking-wider transition uppercase">
+                        Click Here To Order
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM SECTION: Streaming Section (Netflix Location update) -->
+        <h2 class="text-xl font-bold tracking-wide mb-4 flex items-center gap-2 brand-heading">
+            🍿 Streaming Section
+        </h2>
+        <div class="wine-card rounded-2xl p-6 border border-red-950 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-red-600/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-600/10 border border-red-600/20 flex items-center justify-center text-red-500 text-2xl shrink-0 shadow-inner">
+                        <i class="fa-brands fa-netflix"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            Netflix Premium Ultra HD <span class="text-[10px] font-bold bg-red-600/20 text-red-400 px-2 py-0.5 rounded border border-red-600/30 uppercase">4K HDR</span>
+                        </h3>
+                        <p class="text-xs text-[#ffccd5]/70 mt-0.5">Premium shared profiles & full private accounts with full warranty covered.</p>
+                    </div>
+                </div>
+                
+                <a href="http://t.me/eulashqorderbot" target="_blank" class="w-full md:w-auto text-center bg-[#fbf6f0] hover:bg-[#eee6dc] text-[#310a11] text-xs font-bold px-5 py-3 rounded-xl transition shadow-lg shrink-0 flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-cart-shopping"></i> Order Netflix
+                </a>
             </div>
         </div>
 
     </main>
 
-    <!-- Sticky Floating Action Button (CTA) -->
+    <!-- Floating Sticky Action Action Callout -->
     <div class="fixed bottom-6 right-6 z-50">
-        <a href="http://t.me/eulashqorderbot" target="_blank" class="gradient-btn text-white px-6 py-4 rounded-full font-bold text-sm tracking-wide shadow-2xl hover:scale-105 transition-transform duration-200 flex items-center gap-3 border border-white/20 uppercase">
-            <span class="relative flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+        <a href="http://t.me/eulashqorderbot" target="_blank" class="bg-[#fbf6f0] hover:bg-[#eee6dc] text-[#310a11] px-6 py-4 rounded-full font-extrabold text-xs tracking-wider shadow-2xl transition duration-200 flex items-center gap-3 border-2 border-[#4a121d] uppercase">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4a121d] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4a121d]"></span>
             </span>
-            Nak Order? Click Here
+            NAK ORDER? CLICK HERE YAA
         </a>
     </div>
 
-    <!-- Footer -->
-    <footer class="w-full bg-gray-950 border-t border-gray-900 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+    <!-- Web Footer Layout -->
+    <footer class="w-full bg-[#20050a] border-t border-[#310a11] py-8 mt-12 text-xs text-[#ffccd5]/40">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-                &copy; 2026 EULA HQ. All rights reserved.
+                &copy; 2026 EULA HQ. All rights reserved. Custom Station Design.
             </div>
-            <div class="flex items-center gap-6">
-                <a href="https://www.threads.net/@eulashq" target="_blank" class="hover:text-gray-300 transition"><i class="fa-brands fa-threads"></i> Threads</a>
-                <a href="https://www.threads.net/@hqeula" target="_blank" class="hover:text-gray-300 transition"><i class="fa-brands fa-threads text-xs opacity-70"></i> Alt Threads</a>
-                <a href="https://t.me/eulashqbot" target="_blank" class="hover:text-gray-300 transition"><i class="fa-brands fa-telegram"></i> Catalog</a>
-                <a href="http://t.me/eulashqorderbot" target="_blank" class="hover:text-gray-300 transition"><i class="fa-solid fa-cart-shopping"></i> Order Bot</a>
+            <div class="flex flex-wrap items-center justify-center gap-5 font-medium">
+                <a href="https://www.threads.net/@eulashq" target="_blank" class="hover:text-white transition">Threads</a>
+                <a href="https://www.threads.net/@hqeula" target="_blank" class="hover:text-white transition">Alt Account</a>
+                <a href="https://t.me/eulashqbot" target="_blank" class="hover:text-white transition">Catalog Bot</a>
+                <a href="http://t.me/eulashqorderbot" target="_blank" class="hover:text-white transition">Order Desk</a>
             </div>
         </div>
     </footer>
