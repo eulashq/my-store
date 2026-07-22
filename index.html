@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EULA HQ | Official Catalog & Order Guide</title>
+    <title>EulasHQ Store | Official Catalog & Order Guide</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Outfit & Comfortaa Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-        
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Outfit', sans-serif;
             background-color: #310a11; /* Deep Burgundy Background */
             background-image: radial-gradient(circle at 20% 20%, #4a121d 0%, transparent 40%),
                               radial-gradient(circle at 80% 80%, #20050a 0%, transparent 50%);
@@ -55,7 +57,7 @@
     <header class="w-full max-w-5xl mx-auto px-4 py-6 flex flex-col lg:flex-row justify-between items-center gap-4 border-b border-[#4a121d]">
         <div class="flex items-center gap-3 text-center sm:text-left">
             <h1 class="text-3xl font-bold tracking-wider brand-heading flex items-center gap-2">
-                ✨ eulahq <span class="text-xs bg-[#4a121d] text-[#ffccd5] px-2.5 py-0.5 rounded-full border border-pink-900/30">OFFICIAL</span>
+                ✨ EulasHQ Store <span class="text-xs bg-[#4a121d] text-[#ffccd5] px-2.5 py-0.5 rounded-full border border-pink-900/30 font-sans font-semibold">OFFICIAL</span>
             </h1>
         </div>
         
@@ -336,29 +338,56 @@
             <!-- RIGHT COLUMN: Terms & Direct Bot Button -->
             <div class="space-y-6">
 
-                <!-- Terms & Conditions Card -->
-                <div class="wine-card rounded-2xl p-6 shadow-2xl relative">
-                    <div class="absolute top-3 right-4 text-[#ffccd5]/20 text-xl"><i class="fa-solid fa-star"></i></div>
-                    <h3 class="text-lg font-bold text-white mb-4 border-b border-pink-900/40 pb-2 tracking-wide">
-                        Terms & Conditions
-                    </h3>
-                    <span class="text-xs font-bold text-[#ffccd5] tracking-wider block mb-2 uppercase">NOTES</span>
-                    <ul class="space-y-3 text-xs text-[#ffccd5]/90">
+                <!-- ROBUX TERMS & CONDITIONS CARD -->
+                <div class="wine-card rounded-2xl p-6 shadow-2xl relative border-l-4 border-l-pink-400">
+                    <div class="absolute top-3 right-4 text-[#ffccd5]/20 text-xl"><i class="fa-solid fa-[#000] fa-gem"></i></div>
+                    <div class="flex items-center gap-2 border-b border-pink-900/40 pb-2.5 mb-3">
+                        <i class="fa-solid fa-gamepad text-pink-300 text-sm"></i>
+                        <h3 class="text-base font-extrabold text-white tracking-wide">
+                            Robux Terms & Conditions
+                        </h3>
+                    </div>
+                    <span class="text-[11px] font-bold text-[#ffccd5] tracking-widest block mb-2 uppercase text-pink-200">📌 NOTES</span>
+                    <ul class="space-y-2.5 text-xs text-[#ffccd5]/90 font-medium">
                         <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <i class="fa-solid fa-angle-right text-pink-400 mt-0.5 shrink-0"></i>
                             <span>Strictly No Refund After Payment</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
-                            <span>Process Time: 1-5 Hours</span>
+                            <i class="fa-solid fa-angle-right text-pink-400 mt-0.5 shrink-0"></i>
+                            <span class="font-bold text-white bg-pink-950/60 px-1.5 py-0.5 rounded">Process Time: 1-5 minute</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <i class="fa-solid fa-angle-right text-pink-400 mt-0.5 shrink-0"></i>
                             <span>Please No Rush Order</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
-                            <span class="font-bold text-white">No A Scam (100% Trusted Store)</span>
+                            <i class="fa-solid fa-angle-right text-pink-400 mt-0.5 shrink-0"></i>
+                            <span class="font-bold text-pink-200">No A Scam (100% Trusted Store)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- GENERAL APPS TERMS & CONDITIONS -->
+                <div class="wine-card rounded-2xl p-6 shadow-2xl relative">
+                    <div class="flex items-center gap-2 border-b border-pink-900/40 pb-2.5 mb-3">
+                        <i class="fa-solid fa-shield-halved text-pink-300 text-sm"></i>
+                        <h3 class="text-base font-extrabold text-white tracking-wide">
+                            Apps Terms & Conditions
+                        </h3>
+                    </div>
+                    <ul class="space-y-2.5 text-xs text-[#ffccd5]/80">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[5px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Full Warranty Covered For All Apps</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[5px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Apps Process Time: 1-5 Hours</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[5px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Follow Account Guidelines Provided</span>
                         </li>
                     </ul>
                 </div>
@@ -393,7 +422,7 @@
     <footer class="w-full bg-[#20050a] border-t border-[#310a11] py-8 mt-12 text-xs text-[#ffccd5]/40">
         <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-                &copy; 2026 EULA HQ. All rights reserved.
+                &copy; 2026 EulasHQ Store. All rights reserved.
             </div>
             <div class="flex flex-wrap items-center justify-center gap-5 font-medium">
                 <a href="https://www.instagram.com/eulashq" target="_blank" class="hover:text-white transition">Instagram</a>
