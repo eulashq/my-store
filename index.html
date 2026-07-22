@@ -3,202 +3,413 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EULA HQ | Official Store</title>
+    <title>EULA HQ | Official Catalog & Order Guide</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #0b0f19;
+            background-color: #310a11; /* Deep Burgundy Background from Image */
+            background-image: radial-gradient(circle at 20% 20%, #4a121d 0%, transparent 40%),
+                              radial-gradient(circle at 80% 80%, #20050a 0%, transparent 50%);
         }
-        .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        
+        .brand-heading {
+            font-family: 'Comfortaa', cursive;
+            color: #fbf6f0;
         }
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+        /* Cream Notebook Style Card */
+        .notebook-card {
+            background-color: #fbf6f0;
+            color: #2b1216;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(218, 203, 186, 0.2);
+            border: 1px solid #eadacc;
         }
-        .gradient-btn {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+
+        /* Dark Wine Accent Cards */
+        .wine-card {
+            background-color: #4a121d;
+            border: 1px solid rgba(251, 246, 240, 0.15);
         }
-        .gradient-btn:hover {
-            background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+
+        /* Spiral Binder Effect on Left Edge */
+        .spiral-binder {
+            background-image: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 18px,
+                #20050a 18px,
+                #20050a 26px
+            );
         }
     </style>
 </head>
-<body class="text-gray-200 min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+<body class="text-[#fbf6f0] min-h-screen flex flex-col justify-between selection:bg-[#4a121d] selection:text-[#fbf6f0]">
 
-    <!-- Top Navigation Header -->
-    <header class="w-full max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-gray-800">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                <i class="fa-solid fa-crown text-white text-lg"></i>
+    <!-- Header Section -->
+    <header class="w-full max-w-5xl mx-auto px-4 py-6 flex flex-col lg:flex-row justify-between items-center gap-4 border-b border-[#4a121d]">
+        <div class="flex items-center gap-3 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-[#ffccd5]/30 bg-[#4a121d] flex-shrink-0 shadow-lg">
+                <img src="top-left-accent.png" alt="Eula HQ Element" class="w-full h-full object-cover" onerror="this.style.display='none'">
             </div>
-            <span class="text-2xl font-extrabold tracking-tight text-white">EULA<span class="gradient-text">HQ</span></span>
+            <h1 class="text-3xl font-bold tracking-wider brand-heading flex items-center gap-2">
+                ✨ eulahq <span class="text-xs bg-[#4a121d] text-[#ffccd5] px-2.5 py-0.5 rounded-full border border-pink-900/30">OFFICIAL</span>
+            </h1>
         </div>
-        <div class="flex items-center gap-4">
-            <a href="https://www.threads.net/@eulashq" target="_blank" class="text-gray-400 hover:text-white transition duration-200 flex items-center gap-2 text-sm bg-gray-900 px-3 py-1.5 rounded-lg border border-gray-800">
-                <i class="fa-brands fa-threads"></i> @eulashq
+        
+        <!-- Social & Bot Bar -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5">
+            <a href="https://www.instagram.com/eulashq" target="_blank" class="bg-[#4a121d] hover:bg-[#5c1825] text-[#ffccd5] transition text-xs px-3.5 py-2 rounded-xl border border-pink-900/20 flex items-center gap-1.5 font-medium">
+                <i class="fa-brands fa-instagram text-sm"></i> Instagram
             </a>
-            <a href="https://t.me/eulashqbot" target="_blank" class="gradient-btn text-white text-sm font-semibold px-4 py-2 rounded-xl transition shadow-md shadow-indigo-500/10 flex items-center gap-2">
-                <i class="fa-solid fa-book-open"></i> View Catalog
+            <a href="https://www.threads.net/@eulashq" target="_blank" class="bg-[#4a121d] hover:bg-[#5c1825] text-[#ffccd5] transition text-xs px-3.5 py-2 rounded-xl border border-pink-900/20 flex items-center gap-1.5 font-medium">
+                <i class="fa-brands fa-threads text-sm"></i> Threads
+            </a>
+            <a href="http://t.me/eulashqorderbot" target="_blank" class="bg-[#fbf6f0] hover:bg-[#eee6dc] text-[#310a11] transition text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 shadow-md">
+                <i class="fa-solid fa-robot"></i> Order Bot
             </a>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="flex-grow w-full max-w-4xl mx-auto px-4 py-12">
-        
-        <!-- Hero Section -->
-        <div class="text-center mb-10">
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-                Welcome to <span class="gradient-text">EULA HQ</span>
-            </h1>
-            <p class="text-gray-400 text-lg max-w-xl mx-auto">
-                Your premier source for premium digital assets. Quick processing, verified configurations, and dedicated operations.
-            </p>
-        </div>
+    <!-- Main Workspace -->
+    <main class="flex-grow w-full max-w-5xl mx-auto px-4 py-8">
 
-        <!-- Section: How to Order from EulasHQ Store -->
-        <div class="glass-card rounded-2xl p-6 sm:p-8 mb-12 shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-16 -top-16 w-40 h-40 bg-pink-500/10 rounded-full blur-2xl pointer-events-none"></div>
-            <div class="absolute -left-16 -bottom-16 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <!-- SECTION: HOW TO ORDER GUIDE (Wine Glass Box) -->
+        <section class="wine-card rounded-3xl p-6 sm:p-8 mb-10 shadow-2xl relative overflow-hidden">
+            <div class="flex items-center gap-3 mb-6 border-b border-[#ffccd5]/20 pb-4">
+                <div class="w-10 h-10 rounded-2xl bg-[#fbf6f0] text-[#310a11] flex items-center justify-center text-lg font-bold shadow">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div>
+                    <span class="text-[10px] font-bold tracking-widest text-[#ffccd5]/70 uppercase block">✦ Step-By-Step Guide ✦</span>
+                    <h2 class="text-xl font-extrabold text-white">How To Order From EulasHQ Store</h2>
+                </div>
+            </div>
 
-            <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-cart-shopping text-pink-400"></i> How to Order from EulasHQ Store
-            </h2>
-
-            <div class="space-y-6">
-                <!-- Step 1: Initialize the Bot -->
-                <div class="bg-gray-950/50 p-5 rounded-xl border border-gray-800/80">
-                    <div class="flex items-start gap-4">
-                        <div class="w-9 h-9 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400 font-bold text-sm shrink-0">01</div>
-                        <div>
-                            <h3 class="font-semibold text-white mb-1">Open Bot & Press Start</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed mb-4">Click the **Nak Order? Click Here** floating button or the order buttons within featured categories to launch our Telegram order bot.</p>
-                            <a href="http://t.me/eulashqorderbot" target="_blank" class="text-xs bg-gray-900 px-3 py-1.5 rounded-lg border border-gray-800 text-gray-300 hover:text-white transition">
-                                <i class="fa-brands fa-telegram mr-1.5"></i> Open @eulashqorderbot
-                            </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <!-- Step 1 -->
+                <div class="bg-[#310a11]/80 rounded-2xl p-4 border border-pink-900/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-[#ffccd5] bg-[#4a121d] px-2.5 py-0.5 rounded-full border border-pink-900/40">Step 1</span>
+                            <i class="fa-brands fa-telegram text-[#ffccd5]"></i>
                         </div>
+                        <h3 class="font-bold text-sm text-white mb-1">Open Bot & Click Start</h3>
+                        <p class="text-xs text-[#ffccd5]/80 leading-relaxed">Click any order button on this site to open our Telegram Bot, then press <span class="font-bold text-white">START</span>.</p>
                     </div>
+                    <a href="http://t.me/eulashqorderbot" target="_blank" class="mt-3 block text-center bg-[#4a121d] hover:bg-[#5c1825] text-[#ffccd5] text-[11px] font-semibold py-1.5 rounded-lg border border-pink-900/30 transition">
+                        Open @eulashqorderbot
+                    </a>
                 </div>
 
-                <!-- Step 2: Pricing and Fallbacks -->
-                <div class="bg-gray-950/50 p-5 rounded-xl border border-gray-800/80">
-                    <div class="flex items-start gap-4">
-                        <div class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 font-bold text-sm shrink-0">02</div>
-                        <div>
-                            <h3 class="font-semibold text-white mb-1">View Pricelist & Check Backups</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed mb-4">Once inside the bot, use the command button `pricelist` to view current asset rates. **Important:** Robux prices may shift rapidly. If the bot's listed price seems outdated, immediately refer to our Threads channels for the definitive fallback pricing updates.</p>
-                            <div class="space-y-2 flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                                <a href="https://www.threads.net/@eulashq" target="_blank" class="text-xs text-gray-300 hover:text-white transition"><i class="fa-brands fa-threads mr-1 text-pink-400"></i> Main Threads</a>
-                                <a href="https://www.threads.net/@hqeula" target="_blank" class="text-xs text-gray-300 hover:text-white transition"><i class="fa-brands fa-threads mr-1 text-purple-400"></i> Alt Threads</a>
+                <!-- Step 2 -->
+                <div class="bg-[#310a11]/80 rounded-2xl p-4 border border-pink-900/30">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-[#ffccd5] bg-[#4a121d] px-2.5 py-0.5 rounded-full border border-pink-900/40">Step 2</span>
+                        <i class="fa-solid fa-[#]"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-white mb-1">View Pricelist & Check Robux</h3>
+                    <p class="text-xs text-[#ffccd5]/80 leading-relaxed">
+                        Click the <code class="bg-[#4a121d] text-[#ffccd5] px-1 py-0.5 rounded text-[10px]">pricelist</code> command button. <br>
+                        <span class="text-[11px] text-pink-300 font-semibold">⚠️ Note:</span> If Robux rates change, check our Threads accounts for the latest live price updates!
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-[#310a11]/80 rounded-2xl p-4 border border-pink-900/30">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-[#ffccd5] bg-[#4a121d] px-2.5 py-0.5 rounded-full border border-pink-900/40">Step 3</span>
+                        <i class="fa-solid fa-copy text-[#ffccd5]"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-white mb-1">Get Your Order Format</h3>
+                    <p class="text-xs text-[#ffccd5]/80 leading-relaxed">Click the format button you need:</p>
+                    <ul class="text-[11px] text-[#ffccd5] mt-1 space-y-1 font-medium">
+                        <li>✦ <span class="bg-[#4a121d] px-1.5 py-0.5 rounded">୨୧₊˚⊹💗 𝗙𝗢𝗥𝗠𝗔𝗧 𝗢𝗥𝗗𝗘𝗥 𝗥𝗢𝗕𝗨𝗫 ✨ ⊹˚₊୨୧</span></li>
+                        <li>✦ <span class="bg-[#4a121d] px-1.5 py-0.5 rounded">୨୧₊˚⊹💗 𝗙𝗢𝗥𝗠𝗔𝗧 𝗢𝗥𝗗𝗘𝗥 𝗔𝗣𝗣𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ✨ ⊹˚₊୨୧</span></li>
+                    </ul>
+                </div>
+
+                <!-- Step 4 & 5 (Full width on larger screens) -->
+                <div class="md:col-span-2 lg:col-span-3 bg-[#310a11]/80 rounded-2xl p-4 border border-pink-900/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-[#ffccd5] bg-[#4a121d] px-2.5 py-0.5 rounded-full border border-pink-900/40">Step 4 & 5</span>
+                            <h3 class="font-bold text-sm text-white">Submit Order & Wait Confirmation</h3>
+                        </div>
+                        <p class="text-xs text-[#ffccd5]/80 leading-relaxed">
+                            Fill in your details and click <span class="font-bold text-pink-200">୨୧₊˚⊹♡ 🛒 𝐎𝐫𝐝𝐞𝐫 𝐇𝐞𝐫𝐞 🛒 ♡⊹˚₊ 💗</span> in the bot to submit. Then, sit tight while I reply with your order confirmation!
+                        </p>
+                    </div>
+                    <a href="http://t.me/eulashqorderbot" target="_blank" class="bg-[#fbf6f0] hover:bg-[#eee6dc] text-[#310a11] text-xs font-extrabold px-5 py-2.5 rounded-xl shrink-0 transition shadow">
+                        Ready? Launch Bot Now
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Layout Grid: Main Catalog Notebook + Sidebar -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-10">
+            
+            <!-- LEFT & CENTER COLUMN: Services Notebook -->
+            <div class="lg:col-span-2 notebook-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+                
+                <!-- Notebook Binder Spiral Effect (Matching Photo) -->
+                <div class="absolute top-0 bottom-0 left-0 w-6 spiral-binder border-r border-[#eadacc]"></div>
+                <div class="absolute top-0 bottom-0 left-7 w-[2px] border-l border-dashed border-[#eadacc]"></div>
+                
+                <div class="pl-6 space-y-8">
+                    
+                    <!-- SECTION 1: EDITING APPS -->
+                    <div>
+                        <div class="text-center sm:text-left mb-4 border-b-2 border-[#310a11]/10 pb-2">
+                            <span class="text-[10px] font-bold tracking-widest text-[#4a121d]/60 uppercase block">✦ Category 01 ✦</span>
+                            <h2 class="text-xl font-extrabold text-[#310a11] flex items-center gap-2 justify-center sm:justify-start">
+                                <i class="fa-solid fa-wand-magic-sparkles text-xs text-[#4a121d]"></i> EDITING PREMIUM APPS
+                            </h2>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ ALIGHT MOTION PRO</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private (1 Month / 1 Year)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM4.00 - RM5.00</span>
+                                </div>
+                            </div>
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ PICSART GOLD</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private / Sharing (1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM4.70 - RM5.00</span>
+                                </div>
+                            </div>
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ CAPCUT PRO</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private (1 Week / 1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM5.50 - RM11.50</span>
+                                </div>
+                            </div>
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ CANVA PRO</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Invited / Owner Setup</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM2.50 - RM5.00</span>
+                                </div>
+                            </div>
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ REMINI PREMIUM</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private (14 Days / 1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM5.50 - RM7.00</span>
+                                </div>
+                            </div>
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ MEITU PREMIUM</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private (7 Days / 1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM4.50 - RM6.90</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ WINK PREMIUM</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private / Sharing (1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM5.50 - RM7.00</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Step 3: Get Formats and Submit -->
-                <div class="bg-gray-950/50 p-5 rounded-xl border border-gray-800/80">
-                    <div class="flex items-start gap-4">
-                        <div class="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 font-bold text-sm shrink-0">03</div>
-                        <div>
-                            <h3 class="font-semibold text-white mb-1">Select Format & Submit Order</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed mb-4">Ready to lock it in? Press the correct format command within the bot: `୨୧₊˚⊹💗 𝗙𝗢𝗥𝗠𝗔𝗧 𝗢𝗥𝗗𝗘𝗥 𝗥𝗢𝗕𝗨𝗫 ✨ ⊹˚₊୨୧` for Robux deployments, or `୨୧₊˚⊹💗 𝗙𝗢𝗥𝗠𝗔𝗧 𝗢𝗥𝗗𝗘𝗥 𝗔𝗣𝗣𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ✨ ⊹˚₊୨୧` for premium assets. Once complete, click the `୨୧₊˚⊹♡ 🛒 𝐎𝐫𝐝𝐞𝐫 𝐇𝐞𝐫𝐞 🛒 ♡⊹˚₊ 💗` button within the bot to submit.</p>
-                            <span class="text-xs text-gray-500"><i class="fa-solid fa-clock mr-1.5"></i> Then, wait for our manual confirmation reply to officially accept your order.</span>
+                    <!-- SECTION 2: STREAMING APPS -->
+                    <div>
+                        <div class="text-center sm:text-left mb-4 border-b-2 border-[#310a11]/10 pb-2">
+                            <span class="text-[10px] font-bold tracking-widest text-[#4a121d]/60 uppercase block">✦ Category 02 ✦</span>
+                            <h2 class="text-xl font-extrabold text-[#310a11] flex items-center gap-2 justify-center sm:justify-start">
+                                <i class="fa-solid fa-tv text-xs text-[#4a121d]"></i> STREAMING APPS
+                            </h2>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ NETFLIX PREMIUM 4K HDR</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private Profile / Sharing (1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM8.50 - RM15.00</span>
+                                </div>
+                            </div>
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ DISNEY+ HOTSTAR</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private Profile (1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM7.50</span>
+                                </div>
+                            </div>
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ VIU PREMIUM</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private Account (1 Month / 1 Year)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM4.00 - RM10.00</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ PRIME VIDEO / HBO GO</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private Profile (1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM5.00 - RM8.00</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Featured Categories Layout -->
-        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-            <i class="fa-solid fa-bolt text-amber-400"></i> Featured Categories
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-            <div class="glass-card rounded-xl p-5 hover:border-gray-700 transition duration-300">
-                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">Premium</span>
-                <h3 class="text-lg font-bold text-white mt-3 mb-1">Tier-1 Configurations</h3>
-                <p class="text-sm text-gray-400 mb-4">Optimized high-speed variants ready for deployment.</p>
-                <div class="flex justify-between items-center pt-3 border-t border-gray-800">
-                    <span class="text-xs text-gray-500">Check bot for latest price</span>
-                    <a href="https://t.me/eulashqbot" target="_blank" class="text-xs font-semibold text-white hover:underline">View Formats <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
-                </div>
-            </div>
-
-            <div class="glass-card rounded-xl p-5 hover:border-gray-700 transition duration-300">
-                <span class="text-xs font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-2 py-1 rounded">Standard</span>
-                <h3 class="text-lg font-bold text-white mt-3 mb-1">Core Deployments</h3>
-                <p class="text-sm text-gray-400 mb-4">Stable formatting blueprints tailored for standard operations.</p>
-                <div class="flex justify-between items-center pt-3 border-t border-gray-800">
-                    <span class="text-xs text-gray-500">Check bot for latest price</span>
-                    <a href="https://t.me/eulashqbot" target="_blank" class="text-xs font-semibold text-white hover:underline">View Formats <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Last Section: Streaming Section (Netflix) -->
-        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-            <i class="fa-solid fa-film text-pink-500"></i> Streaming Section
-        </h2>
-        <div class="glass-card rounded-xl p-6 border-pink-500/20 hover:border-pink-500/40 transition duration-300 relative overflow-hidden">
-            <div class="absolute right-0 top-0 w-32 h-32 bg-red-600/5 rounded-full blur-2xl pointer-events-none"></div>
-            
-            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div class="flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-xl bg-red-600/10 border border-red-600/20 flex items-center justify-center text-red-500 shadow-inner shrink-0">
-                        <i class="fa-brands fa-netflix text-3xl"></i>
-                    </div>
+                    <!-- SECTION 3: MUSIC APPS -->
                     <div>
-                        <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
-                            Netflix Premium <span class="text-xs font-semibold bg-red-600/20 text-red-400 px-2 py-0.5 rounded border border-red-600/30">Ultra HD 4K</span>
-                        </h3>
-                        <p class="text-sm text-gray-400 mt-1">Shared & Private profiles, anti-screen limits, and full premium packages available.</p>
+                        <div class="text-center sm:text-left mb-4 border-b-2 border-[#310a11]/10 pb-2">
+                            <span class="text-[10px] font-bold tracking-widest text-[#4a121d]/60 uppercase block">✦ Category 03 ✦</span>
+                            <h2 class="text-xl font-extrabold text-[#310a11] flex items-center gap-2 justify-center sm:justify-start">
+                                <i class="fa-solid fa-music text-xs text-[#4a121d]"></i> MUSIC APPS
+                            </h2>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ SPOTIFY PREMIUM</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Individual / Family Plan Join (1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM5.00 - RM12.00</span>
+                                </div>
+                            </div>
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ YOUTUBE PREMIUM</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Invited Account (1 Month / 3 Months)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM4.50 - RM11.00</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ APPLE MUSIC</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Family Invite (1 Month)</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM6.00</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- SECTION 4: CHATGPT & AI APPS -->
+                    <div>
+                        <div class="text-center sm:text-left mb-4 border-b-2 border-[#310a11]/10 pb-2">
+                            <span class="text-[10px] font-bold tracking-widest text-[#4a121d]/60 uppercase block">✦ Category 04 ✦</span>
+                            <h2 class="text-xl font-extrabold text-[#310a11] flex items-center gap-2 justify-center sm:justify-start">
+                                <i class="fa-solid fa-robot text-xs text-[#4a121d]"></i> CHATGPT & AI APPS
+                            </h2>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="border-b border-dashed border-[#d2c3b2] pb-2">
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ CHATGPT PLUS (GPT-4o)</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Sharing Account / Private Account</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM8.00 - RM25.00</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-[#310a11]">◆ CLAUDE PRO / AI TOOLS</h3>
+                                <div class="flex justify-between items-center text-xs text-[#4a121d]/90 mt-1 pl-3">
+                                    <span>Private / Shared Access</span>
+                                    <span class="font-bold bg-[#310a11]/5 px-2 py-0.5 rounded">RM9.00 - RM22.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notebook Footer Tags -->
+                    <div class="mt-8 pt-4 border-t-2 border-[#310a11]/10 flex flex-wrap gap-2 justify-center text-xs font-bold text-[#4a121d]">
+                        <span class="bg-[#eadacc]/40 px-2.5 py-1 rounded-md">✦ All Devices Supported</span>
+                        <span class="bg-[#eadacc]/40 px-2.5 py-1 rounded-md">✦ Instant Delivery</span>
+                        <span class="bg-[#eadacc]/40 px-2.5 py-1 rounded-md">✦ Full Warranty Covered</span>
+                    </div>
+
                 </div>
-                <a href="http://t.me/eulashqorderbot" target="_blank" class="w-full sm:w-auto text-center gradient-btn text-white text-sm font-bold px-5 py-3 rounded-xl transition shadow-lg shadow-purple-500/20 flex items-center justify-center gap-2 shrink-0">
-                    <i class="fa-solid fa-cart-shopping"></i> Order Premium
-                </a>
             </div>
 
-            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 pt-4 border-t border-gray-800/60 text-xs text-gray-500">
-                <span class="flex items-center gap-1"><i class="fa-solid fa-circle-check text-green-500 text-[10px]"></i> Instant Delivery Configs</span>
-                <span class="flex items-center gap-1"><i class="fa-solid fa-circle-check text-green-500 text-[10px]"></i> Full Warranty Covered</span>
-                <span class="flex items-center gap-1"><i class="fa-solid fa-circle-info text-indigo-400 text-[10px]"></i> Check catalog bot for current rate sheets</span>
+            <!-- RIGHT COLUMN: Image & Terms & Direct Bot Button -->
+            <div class="space-y-6">
+                
+                <!-- MAIN ARTWORK DISPLAY CARD -->
+                <div class="w-full rounded-2xl overflow-hidden border border-[#4a121d] shadow-2xl bg-[#4a121d]/30 aspect-[4/5] relative group">
+                    <img src="main-character.jpg" alt="Eula HQ Anime Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#310a11] via-transparent to-transparent opacity-60"></div>
+                </div>
+
+                <!-- Terms & Conditions Card (Wine Card) -->
+                <div class="wine-card rounded-2xl p-6 shadow-2xl relative">
+                    <div class="absolute top-3 right-4 text-[#ffccd5]/20 text-xl"><i class="fa-solid fa-star"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-4 border-b border-pink-900/40 pb-2 tracking-wide">
+                        Terms & Conditions
+                    </h3>
+                    <span class="text-xs font-bold text-[#ffccd5] tracking-wider block mb-2 uppercase">NOTES</span>
+                    <ul class="space-y-3 text-xs text-[#ffccd5]/90">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Strictly No Refund After Payment</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Process Time: 1-5 Hours</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span>Please No Rush Order</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle text-[6px] mt-1.5 text-pink-400 shrink-0"></i>
+                            <span class="font-bold text-white">No A Scam (100% Trusted Store)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Order Action Card -->
+                <div class="bg-[#fbf6f0] border-2 border-[#4a121d] rounded-2xl p-4 shadow-xl text-center text-[#310a11]">
+                    <div class="bg-[#4a121d]/10 rounded-lg p-2 mb-3 text-xs font-mono font-bold tracking-tight text-[#4a121d]">
+                         🔍 @eulashq
+                    </div>
+                    <!-- LINK DIRECTLY TO ORDER BOT -->
+                    <a href="http://t.me/eulashqorderbot" target="_blank" class="block w-full bg-[#4a121d] hover:bg-[#5c1825] text-[#fbf6f0] font-extrabold text-xs py-3 rounded-xl tracking-wider transition uppercase shadow-md">
+                        <i class="fa-solid fa-cart-shopping mr-1"></i> CLICK LINK KAT BIO YAA 💗
+                    </a>
+                </div>
+
             </div>
         </div>
 
     </main>
 
-    <!-- Sticky Floating Action Button (CTA) -->
+    <!-- Floating Sticky Action Button (Direct to Order Bot) -->
     <div class="fixed bottom-6 right-6 z-50">
-        <a href="http://t.me/eulashqorderbot" target="_blank" class="gradient-btn text-white px-6 py-4 rounded-full font-bold text-sm tracking-wide shadow-2xl hover:scale-105 transition-transform duration-200 flex items-center gap-3 border border-white/20 uppercase">
-            <span class="relative flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+        <a href="http://t.me/eulashqorderbot" target="_blank" class="bg-[#fbf6f0] hover:bg-[#eee6dc] text-[#310a11] px-6 py-4 rounded-full font-extrabold text-xs tracking-wider shadow-2xl transition duration-200 flex items-center gap-3 border-2 border-[#4a121d] uppercase">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4a121d] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4a121d]"></span>
             </span>
-            Nak Order? Click Here
+            NAK ORDER? CLICK HERE YAA 💗
         </a>
     </div>
 
-    <!-- Footer -->
-    <footer class="w-full bg-gray-950 border-t border-gray-900 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+    <!-- Web Footer Layout -->
+    <footer class="w-full bg-[#20050a] border-t border-[#310a11] py-8 mt-12 text-xs text-[#ffccd5]/40">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
                 &copy; 2026 EULA HQ. All rights reserved.
             </div>
-            <div class="flex items-center gap-6">
-                <a href="https://www.threads.net/@eulashq" target="_blank" class="hover:text-gray-300 transition"><i class="fa-brands fa-threads"></i> Threads</a>
-                <a href="https://www.threads.net/@hqeula" target="_blank" class="hover:text-gray-300 transition"><i class="fa-brands fa-threads text-xs opacity-70"></i> Alt Threads</a>
-                <a href="https://t.me/eulashqbot" target="_blank" class="hover:text-gray-300 transition"><i class="fa-brands fa-telegram"></i> Catalog</a>
-                <a href="http://t.me/eulashqorderbot" target="_blank" class="hover:text-gray-300 transition"><i class="fa-solid fa-cart-shopping"></i> Order Bot</a>
+            <div class="flex flex-wrap items-center justify-center gap-5 font-medium">
+                <a href="https://www.instagram.com/eulashq" target="_blank" class="hover:text-white transition">Instagram</a>
+                <a href="https://www.threads.net/@eulashq" target="_blank" class="hover:text-white transition">Threads</a>
+                <a href="https://www.threads.net/@hqeula" target="_blank" class="hover:text-white transition">Alt Account</a>
+                <a href="http://t.me/eulashqorderbot" target="_blank" class="hover:text-white transition">Order Bot</a>
             </div>
         </div>
     </footer>
