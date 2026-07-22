@@ -13,7 +13,7 @@
         
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #310a11; /* Deep Burgundy Background from Image */
+            background-color: #310a11; /* Deep Burgundy Background */
             background-image: radial-gradient(circle at 20% 20%, #4a121d 0%, transparent 40%),
                               radial-gradient(circle at 80% 80%, #20050a 0%, transparent 50%);
         }
@@ -54,9 +54,6 @@
     <!-- Header Section -->
     <header class="w-full max-w-5xl mx-auto px-4 py-6 flex flex-col lg:flex-row justify-between items-center gap-4 border-b border-[#4a121d]">
         <div class="flex items-center gap-3 text-center sm:text-left">
-            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-[#ffccd5]/30 bg-[#4a121d] flex-shrink-0 shadow-lg">
-                <img src="top-left-accent.png" alt="Eula HQ Element" class="w-full h-full object-cover" onerror="this.style.display='none'">
-            </div>
             <h1 class="text-3xl font-bold tracking-wider brand-heading flex items-center gap-2">
                 ✨ eulahq <span class="text-xs bg-[#4a121d] text-[#ffccd5] px-2.5 py-0.5 rounded-full border border-pink-900/30">OFFICIAL</span>
             </h1>
@@ -79,7 +76,7 @@
     <!-- Main Workspace -->
     <main class="flex-grow w-full max-w-5xl mx-auto px-4 py-8">
 
-        <!-- SECTION: HOW TO ORDER GUIDE (Wine Glass Box) -->
+        <!-- SECTION: HOW TO ORDER GUIDE -->
         <section class="wine-card rounded-3xl p-6 sm:p-8 mb-10 shadow-2xl relative overflow-hidden">
             <div class="flex items-center gap-3 mb-6 border-b border-[#ffccd5]/20 pb-4">
                 <div class="w-10 h-10 rounded-2xl bg-[#fbf6f0] text-[#310a11] flex items-center justify-center text-lg font-bold shadow">
@@ -112,12 +109,12 @@
                 <div class="bg-[#310a11]/80 rounded-2xl p-4 border border-pink-900/30">
                     <div class="flex items-center justify-between mb-2">
                         <span class="text-xs font-bold text-[#ffccd5] bg-[#4a121d] px-2.5 py-0.5 rounded-full border border-pink-900/40">Step 2</span>
-                        <i class="fa-solid fa-[#]"></i>
+                        <i class="fa-solid fa-list-check text-[#ffccd5]"></i>
                     </div>
                     <h3 class="font-bold text-sm text-white mb-1">View Pricelist & Check Robux</h3>
                     <p class="text-xs text-[#ffccd5]/80 leading-relaxed">
                         Click the <code class="bg-[#4a121d] text-[#ffccd5] px-1 py-0.5 rounded text-[10px]">pricelist</code> command button. <br>
-                        <span class="text-[11px] text-pink-300 font-semibold">⚠️ Note:</span> If Robux rates change, check our Threads accounts for the latest live price updates!
+                        <span class="text-[11px] text-pink-300 font-semibold">⚠️ Note:</span> If Robux rates change, check our Threads accounts for live price updates!
                     </p>
                 </div>
 
@@ -135,7 +132,7 @@
                     </ul>
                 </div>
 
-                <!-- Step 4 & 5 (Full width on larger screens) -->
+                <!-- Step 4 & 5 -->
                 <div class="md:col-span-2 lg:col-span-3 bg-[#310a11]/80 rounded-2xl p-4 border border-pink-900/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div class="space-y-1">
                         <div class="flex items-center gap-2">
@@ -143,7 +140,7 @@
                             <h3 class="font-bold text-sm text-white">Submit Order & Wait Confirmation</h3>
                         </div>
                         <p class="text-xs text-[#ffccd5]/80 leading-relaxed">
-                            Fill in your details and click <span class="font-bold text-pink-200">୨୧₊˚⊹♡ 🛒 𝐎𝐫𝐝𝐞𝐫 𝐇𝐞𝐫𝐞 🛒 ♡⊹˚₊ 💗</span> in the bot to submit. Then, sit tight while I reply with your order confirmation!
+                            Fill in your details and click <span class="font-bold text-pink-200">୨୧₊˚⊹♡ 🛒 𝐎𝐫𝐝𝐞𝐫 𝐇𝐞𝐫𝐞 🛒 ♡⊹˚₊ 💗</span> in the bot to submit. Then, wait until I reply with your order confirmation!
                         </p>
                     </div>
                     <a href="http://t.me/eulashqorderbot" target="_blank" class="bg-[#fbf6f0] hover:bg-[#eee6dc] text-[#310a11] text-xs font-extrabold px-5 py-2.5 rounded-xl shrink-0 transition shadow">
@@ -160,7 +157,7 @@
             <!-- LEFT & CENTER COLUMN: Services Notebook -->
             <div class="lg:col-span-2 notebook-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
                 
-                <!-- Notebook Binder Spiral Effect (Matching Photo) -->
+                <!-- Notebook Binder Spiral Effect -->
                 <div class="absolute top-0 bottom-0 left-0 w-6 spiral-binder border-r border-[#eadacc]"></div>
                 <div class="absolute top-0 bottom-0 left-7 w-[2px] border-l border-dashed border-[#eadacc]"></div>
                 
@@ -336,16 +333,10 @@
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN: Image & Terms & Direct Bot Button -->
+            <!-- RIGHT COLUMN: Terms & Direct Bot Button -->
             <div class="space-y-6">
-                
-                <!-- MAIN ARTWORK DISPLAY CARD -->
-                <div class="w-full rounded-2xl overflow-hidden border border-[#4a121d] shadow-2xl bg-[#4a121d]/30 aspect-[4/5] relative group">
-                    <img src="main-character.jpg" alt="Eula HQ Anime Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#310a11] via-transparent to-transparent opacity-60"></div>
-                </div>
 
-                <!-- Terms & Conditions Card (Wine Card) -->
+                <!-- Terms & Conditions Card -->
                 <div class="wine-card rounded-2xl p-6 shadow-2xl relative">
                     <div class="absolute top-3 right-4 text-[#ffccd5]/20 text-xl"><i class="fa-solid fa-star"></i></div>
                     <h3 class="text-lg font-bold text-white mb-4 border-b border-pink-900/40 pb-2 tracking-wide">
@@ -373,13 +364,12 @@
                 </div>
 
                 <!-- Order Action Card -->
-                <div class="bg-[#fbf6f0] border-2 border-[#4a121d] rounded-2xl p-4 shadow-xl text-center text-[#310a11]">
+                <div class="bg-[#fbf6f0] border-2 border-[#4a121d] rounded-2xl p-5 shadow-xl text-center text-[#310a11]">
                     <div class="bg-[#4a121d]/10 rounded-lg p-2 mb-3 text-xs font-mono font-bold tracking-tight text-[#4a121d]">
                          🔍 @eulashq
                     </div>
-                    <!-- LINK DIRECTLY TO ORDER BOT -->
-                    <a href="http://t.me/eulashqorderbot" target="_blank" class="block w-full bg-[#4a121d] hover:bg-[#5c1825] text-[#fbf6f0] font-extrabold text-xs py-3 rounded-xl tracking-wider transition uppercase shadow-md">
-                        <i class="fa-solid fa-cart-shopping mr-1"></i> CLICK LINK KAT BIO YAA 💗
+                    <a href="http://t.me/eulashqorderbot" target="_blank" class="block w-full bg-[#4a121d] hover:bg-[#5c1825] text-[#fbf6f0] font-extrabold text-xs py-3.5 rounded-xl tracking-wider transition uppercase shadow-md">
+                        <i class="fa-solid fa-cart-shopping mr-1.5"></i> CLICK LINK KAT BIO YAA 💗
                     </a>
                 </div>
 
@@ -388,7 +378,7 @@
 
     </main>
 
-    <!-- Floating Sticky Action Button (Direct to Order Bot) -->
+    <!-- Floating Sticky Action Button -->
     <div class="fixed bottom-6 right-6 z-50">
         <a href="http://t.me/eulashqorderbot" target="_blank" class="bg-[#fbf6f0] hover:bg-[#eee6dc] text-[#310a11] px-6 py-4 rounded-full font-extrabold text-xs tracking-wider shadow-2xl transition duration-200 flex items-center gap-3 border-2 border-[#4a121d] uppercase">
             <span class="relative flex h-2 w-2">
